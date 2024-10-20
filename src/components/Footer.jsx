@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <>
       <div className='footer-fixed'>
-        <span>{dateTime()} | Copyright - WC2 - willconde2@hotmail.com</span>
+        <span>{dateTime()} | WC2 | willconde2@hotmail.com</span>
       </div>
     </>
   );

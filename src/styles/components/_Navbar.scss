@@ -1,27 +1,43 @@
-.navbar {
-  display: flex;
-  flex-direction: row;
-}
-
 .container-fluid {
-  display: flex;
-  background-color: #1f3a46;
+  width: 70%;
+  display: grid;
+  padding: 10px;
+  margin-top: 2rem;
+  background-color: #04aeef;
   border-radius: 20px;
+
   a {
-    color: orangered;
+    color: whitesmoke;
   }
+
+  ul li a {
+    color: #04aeef;
+  }
+
   .form-control {
     text-align: center;
     background-color: whitesmoke;
   }
-  .btn{
-    color: orangered;
-    border: solid 1px whitesmoke
+
+   .me-2 {
+      color: #04aeef;
+    }
+
+    .d-flex{
+      padding: 1rem;
+    }
+
+  .btn {
+    color: whitesmoke;
+    border: solid 1px whitesmoke;
+  }
+
+  .btn:hover {
+    background-color: rgb(44, 44, 161);
   }
 }
 
 .container-fluid-img {
   max-width: 50px;
-  border-radius: 25px ;
+  border-radius: 25px;
 }
-

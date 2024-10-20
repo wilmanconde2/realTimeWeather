@@ -5,11 +5,7 @@ const Navbar = ({ setWeather, city, setCity, unit, setUnit }) => {
   const [searchValue, setSearchValue] = useState('');
 
   const getWeather = async (city, unit) => {
-    // const url = `https://api.weatherstack.com/current?access_key=${urls.urlAPI}&query=${city}&units=${unit}`;
-    
-
-
-    const url = `https://api.tomorrow.io/v4/weather/realtime?location=cali&units=metric&apikey=69TAAJQKr9b3Aw6dJpVJ8ETr69wJJ6EO`;
+    const url = `https://api.weatherstack.com/current?access_key=${urls.urlAPIW}&query=${city}&units=${unit}`;
 
     const options = {
       method: 'GET',
@@ -19,11 +15,6 @@ const Navbar = ({ setWeather, city, setCity, unit, setUnit }) => {
       const response = await fetch(url, options);
       const data = await response.json();
       console.log(data);
-
-      // setCity(data.location.name);
-      // setWeather(data);
-
-
 
       setCity(data.location.name);
       setWeather(data);
@@ -59,50 +50,52 @@ const Navbar = ({ setWeather, city, setCity, unit, setUnit }) => {
   }, [unit]);
 
   return (
-    <nav className='navbar bg-body-tertiary '>
-      <div className='container-fluid'>
-        <img className='container-fluid-img' src='./weather.png' alt='logo' />
-        <div className='nav-item dropdown'>
-          <a
-            className='nav-link dropdown-toggle'
-            href='#'
-            role='button'
-            data-bs-toggle='dropdown'
-            aria-expanded='false'
-          >
-            T. Unit
-          </a>
-          <ul className='dropdown-menu'>
-            <li>
-              <a className='dropdown-item' onClick={() => handleUnitChange('m')}>
-                °C
-              </a>
-            </li>
-            <li>
-              <hr className='dropdown-divider' />
-            </li>
-            <li>
-              <a className='dropdown-item' onClick={() => handleUnitChange('f')}>
-                °F
-              </a>
-            </li>
-          </ul>
+    <>
+      <nav className='navbar bg-body-tertiary '>
+        <div className='container-fluid'>
+          <img className='container-fluid-img' src='./weather.png' alt='logo' />
+          <div className='nav-item dropdown'>
+            <a
+              className='nav-link dropdown-toggle'
+              href='#'
+              role='button'
+              data-bs-toggle='dropdown'
+              aria-expanded='false'
+            >
+              T. Unit
+            </a>
+            <ul className='dropdown-menu'>
+              <li>
+                <a className='dropdown-item' onClick={() => handleUnitChange('m')}>
+                  °C
+                </a>
+              </li>
+              <li>
+                <hr className='dropdown-divider' />
+              </li>
+              <li>
+                <a className='dropdown-item' onClick={() => handleUnitChange('f')}>
+                  °F
+                </a>
+              </li>
+            </ul>
+          </div>
+          <form className='d-flex' role='search' onSubmit={handleSubmit}>
+            <input
+              className='form-control me-2'
+              type='search'
+              placeholder='City'
+              aria-label='Search'
+              onChange={handleChange}
+              value={searchValue}
+            />
+            <button className='btn btn-outline-success' type='submit'>
+              Search
+            </button>
+          </form>
         </div>
-        <form className='d-flex' role='search' onSubmit={handleSubmit}>
-          <input
-            className='form-control me-2'
-            type='search'
-            placeholder='City'
-            aria-label='Search'
-            onChange={handleChange}
-            value={searchValue}
-          />
-          <button className='btn btn-outline-success' type='submit'>
-            Search
-          </button>
-        </form>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 
