@@ -1,0 +1,27 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+}
+
+.container-fluid {
+  display: flex;
+  background-color: #1f3a46;
+  border-radius: 20px;
+  a {
+    color: orangered;
+  }
+  .form-control {
+    text-align: center;
+    background-color: whitesmoke;
+  }
+  .btn{
+    color: orangered;
+    border: solid 1px whitesmoke
+  }
+}
+
+.container-fluid-img {
+  max-width: 50px;
+  border-radius: 25px ;
+}
+
