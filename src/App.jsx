@@ -68,10 +68,10 @@ const App = () => {
           </ul>
           <div className='card-body'>
             <a className='card-link' onClick={() => handleUnitChange('m')}>
-              Centigrade
+              °C
             </a>
             <a className='card-link' onClick={() => handleUnitChange('f')}>
-              Fahrenheit
+              °F
             </a>
           </div>
         </div>
