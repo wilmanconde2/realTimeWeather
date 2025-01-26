@@ -1,43 +1,59 @@
 .container-fluid {
   width: 70%;
-  display: grid;
+  justify-content: space-evenly !important;
   padding: 10px;
-  margin-top: 2rem;
+  margin-block: 2rem;
   background-color: #04aeef;
   border-radius: 20px;
+}
 
-  a {
-    color: whitesmoke;
-  }
+h1 {
+  margin: 1rem;
+  font-size: 1.5rem;
+}
 
-  ul li a {
-    color: #04aeef;
-  }
+a {
+  color: whitesmoke;
+}
 
-  .form-control {
-    text-align: center;
-    background-color: whitesmoke;
-  }
+ul li a {
+  color: #04aeef;
+}
 
-   .me-2 {
-      color: #04aeef;
-    }
+.form-control {
+  text-align: center;
+  background-color: whitesmoke;
+}
 
-    .d-flex{
-      padding: 1rem;
-    }
+.me-2 {
+  color: #04aeef;
+}
 
-  .btn {
-    color: whitesmoke;
-    border: solid 1px whitesmoke;
-  }
+.d-flex {
+  padding: 1rem;
+}
 
-  .btn:hover {
-    background-color: rgb(44, 44, 161);
-  }
+.btn {
+  color: whitesmoke;
+  border: solid 1px whitesmoke;
+}
+
+.btn:hover {
+  background-color: rgb(44, 44, 161);
 }
 
 .container-fluid-img {
   max-width: 50px;
   border-radius: 25px;
 }
+
+// ! -----------------------------------------------------------
+//  BREAKPOINTS
+// ! -----------------------------------------------------------
+
+@media (min-width: 768px) {
+  .container-fluid {
+    width: 50%;
+  }
+}
+
