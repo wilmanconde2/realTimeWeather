@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import urls from '../main.jsx';
 
 const Navbar = ({ setWeather, city, setCity, unit, setUnit }) => {
@@ -97,6 +98,14 @@ const Navbar = ({ setWeather, city, setCity, unit, setUnit }) => {
       </nav>
     </>
   );
+};
+
+Navbar.propTypes = {
+  setWeather: PropTypes.func.isRequired,
+  city: PropTypes.string.isRequired,
+  setCity: PropTypes.func.isRequired,
+  unit: PropTypes.string.isRequired,
+  setUnit: PropTypes.func.isRequired,
 };
 
 export default Navbar;
