@@ -1,23 +1,30 @@
-const dateTime = () => {
-  const now = new Date();
-
-  const day = String(now.getDate()).padStart(2, '0');
-  const month = String(now.getMonth() + 1).padStart(2, '0');
-  const year = String(now.getFullYear()).slice(-2);
-
-  let hours = now.getHours();
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const ampm = hours >= 12 ? 'PM' : 'AM';
-  hours = hours % 12 || 12;
-
-  return `${day}/${month}/${year} ${hours}:${minutes} ${ampm}`;
-};
+const year = new Date().getFullYear();
 
 const Footer = () => {
   return (
     <>
       <div className='footer-fixed'>
-        <span>{dateTime()} | WC2 | willconde2@hotmail.com</span>
+        © {year} &middot; by WC2 &middot; willconde2@hotmail.com
+        <div id='redesSociales'>
+          <a href={'https://github.com/wilmanconde2'} target='_blank' rel='noopener noreferrer'>
+            <img
+              className='redesSociales'
+              src='/githubWhite.png'
+              alt='Github icons created by -Artist - Flaticon'
+            />
+          </a>
+          <a
+            href={'https://www.linkedin.com/in/wilman-conde/'}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <img
+              className='redesSociales'
+              src='/linkedinWhite.png'
+              alt='Linkedin icons created by Smashicons - Flaticon'
+            />
+          </a>
+        </div>
       </div>
     </>
   );
