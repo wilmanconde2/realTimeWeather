@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import useTitulo from './hooks/useTitulo.jsx';
@@ -21,7 +21,6 @@ const App = () => {
   return (
     <>
       <Navbar setWeather={setWeather} city={city} setCity={setCity} unit={unit} setUnit={setUnit} />
-      <h1>Real Time Weather</h1>
       <header className='container'>
         <div className='card'>
           <div className='card__imgContainer'>

@@ -1,4 +1,6 @@
 .footer-fixed {
+  text-decoration: none;
+  z-index: 10;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -9,4 +11,13 @@
   padding: 10px;
   font-family: Arial, sans-serif;
   font-size: 14px;
+}
+
+.footer-fixed:visited {
+  color: white;
+}
+
+.redesSociales {
+  width: 1.5rem;
+  margin-right: 10px;
 }
